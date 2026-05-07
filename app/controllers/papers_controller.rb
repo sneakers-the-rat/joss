@@ -109,6 +109,7 @@ class PapersController < ApplicationController
                   page: params[:page],
                   per_page: 10)
       @term = "edited by #{params['editor']}"
+      @badge = {type: "editor", value: params['editor']}
     elsif params['reviewer']
       @papers = Paper.search(params['reviewer'], fields: [:reviewers], misspellings: false, order: { accepted_at: :desc },
                   page: params[:page],

@@ -1,12 +1,15 @@
 <% if badge[:type] == 'reviewer' %>
   <% badge_url = badges_by_reviewer_url(reviewer: badge[:value]) %>
   <% badge_markdown = "[![JOSS Reviews](#{badge_url})](#{papers_by_reviewer_url(reviewer: badge[:value])})" %>
+<% elsif badge[:type] == 'editor' %>
+  <% badge_url = badges_by_editor_url(editor: badge[:value]) %>
+  <% badge_markdown = "[![JOSS Editor](#{badge_url})](#{papers_by_editor_url(editor: badge[:value])})" %>
 <% else %>
   <% badge_url = "" %>
   <% badge_markdown = "" %>
 <% end %>
 <div class="badge-container" id="markdown-badge">
-  <img id="reviewer-badge" src="<%= badge_url %>">
+  <img id="joss-badge" src="<%= badge_url %>">
     <button
       id="badge-copy-button"
       class="btn btn-outline-secondary btn-sm"
