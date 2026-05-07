@@ -28,7 +28,7 @@ class BadgesController < ApplicationController
   def edited_by
     n_edits = Paper.visible
                    .joins("JOIN editors ON editors.id = papers.editor_id")
-                   .where(editors: {login:params[:editor]})
+                   .where(editors: { login: params[:editor] })
                    .count
     @key = string_item("JOSS Editor", COLORS[:gray])
     @value = string_item(n_edits.to_s, COLORS[:purple], @key[:outer_width])
