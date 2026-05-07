@@ -9,7 +9,8 @@ class BadgesController < ApplicationController
 
   COLORS = {
     gray: "#555",
-    blue: "#007ec6"
+    blue: "#007ec6",
+    purple: "#4f4686"
   }
 
   def reviewed_by
@@ -25,9 +26,12 @@ class BadgesController < ApplicationController
   end
 
   def edited_by
-    n_edits = Paper.visible.where(":editor = editor", editor: params[:editor]).count
+    n_edits = Paper.visible
+                   .joins("JOIN editors ON editors.id = papers.editor_id")
+                   .where(editors: {login:params[:editor]})
+                   .count
     @key = string_item("JOSS Editor", COLORS[:gray])
-    @value = string_item(n_edits.to_s, COLORS[:blue], @key[:outer_width])
+    @value = string_item(n_edits.to_s, COLORS[:purple], @key[:outer_width])
     @badge_width = @key[:outer_width] + @value[:outer_width]
 
     render template: 'badges/badge', locals: {
