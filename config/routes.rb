@@ -95,6 +95,7 @@ Rails.application.routes.draw do
 
   get '/blog' => redirect("http://blog.joss.theoj.org"), as: :blog
 
+  get '/badges/edited_by/:editor', to: "badges#edited_by", format: "svg", as: "badges_by_editor"
   get '/badges/reviewed_by/:reviewer', to: "badges#reviewed_by", format: "svg", as: "badges_by_reviewer"
 
   # API methods
