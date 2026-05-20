@@ -18,6 +18,8 @@ If you're struggling with your editorial work, please let your buddy or an EiC k
 
 As documented above, usually, papers will be assigned to you by one of the TEiCs. We ask that editors do their best to respond in a timely fashion (~ 3 working days) to invites to edit a new submission.
 
+You can adjust the total amount of papers you are able to handle in [your editor profile](https://joss.theoj.org/editor_profile). This will signal to track editors that you are available to take on more papers.
+
 ## Continued attention to assigned submissions
 
 As an editor, part of your role is to ensure that submissions you're responsible for are progressing smoothly through the editorial process. This means that:
