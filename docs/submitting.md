@@ -176,8 +176,11 @@ Further details about the review process are available in the [reviewer guidelin
 
 ## Post-Review
 
-- Upon successful completion of the review, authors will make a tagged release of the software. Releases must include the complete contents of the repository at the tagged release commit. It is recommended to also include built artifacts like compiled binaries, when applicable, reasonable, and supported by the archive.
-- Authors will deposit a copy of the repository at the tagged release with a research data repository, typically one that is listed in [re3data.org](https://re3data.org), such as [Zenodo](https://zenodo.org/) (see [below](#archiving-with-zenodo)), [figshare](https://figshare.com/), or an institutional repository. The repository will accept the release and its associated metadata, and will provide a DOI for the deposit. The Author then updates the review issue thread with the version number of the release and the DOI from the data research data repository.
+Upon successful completion of the review:
+
+- Authors will make a tagged, archival release of the software in the GitHub[^otherforges] repository (see [below](#archiving-the-submission)).
+- Authors will deposit the archival release with a research data repository. The repository will accept the release and its associated metadata, and will provide a DOI for the deposit. 
+- The Author then updates the review issue thread with the version number of the release and the DOI from the data research data repository.
 - After we assign a DOI for your accepted JOSS paper, its metadata is deposited with CrossRef and listed on the JOSS website.
 - The review issue will be closed, and an automatic post from [@JOSS at Mastodon](https://fosstodon.org/@joss) will announce it!
 
@@ -186,19 +189,32 @@ Optionally:
   See the [`CITATION.cff` docs](https://citation-file-format.github.io/) or 
   [Zenodo's citation docs](https://help.zenodo.org/docs/github/describe-software/citation-file/).
 
-### Archiving with Zenodo
+[^otherforges]: Repositories hosted on code forges other than GitHub should use an analogous "release" feature, if available.
 
-Repository archives at Zenodo can either be made through Zenodo's automatic release depositing feature
-or manually. 
-It is recommended to create a `CITATION.cff` file so the JOSS metadata is incorporated in the Zenodo deposit.
+### Archiving the Submission
 
-#### Automatic Archiving
+Submissions must be archived in a repository to ensure long-term availability of the work.
+Repositories are typically those listed in [re3data.org](https://re3data.org), 
+such as [Zenodo](https://zenodo.org/), 
+[figshare](https://figshare.com/), 
+or an institutional repository. 
+
+Archival releases **must:**
+- Correspond to a git tag with the current software version[^archivetag] in the submitted repository or repositories.
+- Include the complete contents of material considered during review. Typically this will be the contents of the repository, but in the case of monorepo submissions that include unreviewed material, the unreviewed material may be omitted.
+
+Archival releases **may** optionally, at the Author's discretion:
+- Include any built artifacts like compiled binaries that would be necessary to use or understand the work.
+
+[^archivetag]: e.g. The tag should be a version like `1.2.3` or `v1.2.3` rather than something like `joss-archive`.
+
+#### Automatic Archiving with Zenodo
 
 See: 
 [Enable a GitHub repository](https://help.zenodo.org/docs/github/enable-repository/), 
 [Archive a release from GitHub](https://help.zenodo.org/docs/github/archive-software/github-upload/)
 
-After creating the GitHub release:
+After creating the archival release:
 
 - Navigate to the [github settings page](https://zenodo.org/account/settings/github/),
 - Link your GitHub account, if it isn't already.
@@ -208,20 +224,24 @@ After creating the GitHub release:
   if the repository is owned by an organization that has not granted permissions.
 
 Zenodo will now automatically update its archived copy whenever a GitHub release is made.
+It is recommended to create a `CITATION.cff` file so the JOSS metadata is incorporated in future Zenodo deposits after the initial post-review deposit.
 
 #### Manual Archiving
 
-See: 
+The release may be manually submitted to the chosen archival repository.
+The steps for repository submission vary by repository,
+but they typically include these steps:
+
+- Download the files from the GitHub release, or otherwise from the tagged commit.
+- Create and upload a zipped archive of the release contents.
+- Add metadata that allows the work to be identified and linked to the source repository and JOSS submission.
+- Publish the record and receive a DOI.
+
+```{tip}
+For manual archiving at Zenodo, see 
 [Upload software manually](https://help.zenodo.org/docs/github/archive-software/manual-upload/) and 
 [Create new upload](https://help.zenodo.org/docs/deposit/create-new-upload)
-
-- Download the files from the GitHub release
-- Create a new [Zenodo upload](https://help.zenodo.org/docs/deposit/create-new-upload/)
-- Upload the zipped files from the release.
-  When depositing manually, you must upload a single .zip file.
-- Select "Software" as the resource type, 
-  and add [metadata](https://help.zenodo.org/docs/deposit/describe-records/) for the deposit
-- Publish the record
+```
 
 ## Confidential requests
 
