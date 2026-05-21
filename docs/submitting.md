@@ -177,7 +177,7 @@ Further details about the review process are available in the [reviewer guidelin
 ## Post-Review
 
 - Upon successful completion of the review, authors will make a tagged release of the software. Releases must include the complete contents of the repository at the tagged release commit. It is recommended to also include built artifacts like compiled binaries, when applicable, reasonable, and supported by the archive.
-- Authors will deposit a copy of the repository at the tagged release with a data-archiving service such as [Zenodo](https://zenodo.org/) (see [below](#archiving-with-zenodo)) or [figshare](https://figshare.com/), get a DOI for the archive, and update the review issue thread with the version number and DOI.
+- Authors will deposit a copy of the repository at the tagged release with a research data repository, typically one that is listed in [re3data.org](https://re3data.org), such as [Zenodo](https://zenodo.org/) (see [below](#archiving-with-zenodo)), [figshare](https://figshare.com/), or an institutional repository. The repository will accept the release and its associated metadata, and will provide a DOI for the deposit. The Author then updates the review issue thread with the version number of the release and the DOI from the data research data repository.
 - After we assign a DOI for your accepted JOSS paper, its metadata is deposited with CrossRef and listed on the JOSS website.
 - The review issue will be closed, and an automatic post from [@JOSS at Mastodon](https://fosstodon.org/@joss) will announce it!
 
