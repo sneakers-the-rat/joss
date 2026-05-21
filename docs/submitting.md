@@ -188,24 +188,10 @@ Optionally:
 
 ### Archiving with Zenodo
 
-Repository archives at Zenodo can either be made manually, 
-or through Zenodo's automatic release depositing feature. 
+Repository archives at Zenodo can either be made through Zenodo's automatic release depositing feature
+or manually. 
 It is recommended to create either a `CITATION.cff` or a 
 [`.zenodo.json`](https://help.zenodo.org/docs/github/describe-software/zenodo-json/) file so the JOSS metadata is incorporated in the Zenodo deposit.
-
-#### Manual Archiving
-
-See: 
-[Upload software manually](https://help.zenodo.org/docs/github/archive-software/manual-upload/) and 
-[Create new upload](https://help.zenodo.org/docs/deposit/create-new-upload)
-
-- Download the files from the GitHub release
-- Create a new [Zenodo upload](https://help.zenodo.org/docs/deposit/create-new-upload/)
-- Upload the zipped files from the release.
-  When depositing manually, you must upload a single .zip file.
-- Select "Software" as the resource type, 
-  and add [metadata](https://help.zenodo.org/docs/deposit/describe-records/) for the deposit
-- Publish the record
 
 #### Automatic Archiving
 
@@ -223,6 +209,20 @@ After creating the GitHub release:
   if the repository is owned by an organization that has not granted permissions.
 
 Zenodo will now automatically update its archived copy whenever a GitHub release is made.
+
+#### Manual Archiving
+
+See: 
+[Upload software manually](https://help.zenodo.org/docs/github/archive-software/manual-upload/) and 
+[Create new upload](https://help.zenodo.org/docs/deposit/create-new-upload)
+
+- Download the files from the GitHub release
+- Create a new [Zenodo upload](https://help.zenodo.org/docs/deposit/create-new-upload/)
+- Upload the zipped files from the release.
+  When depositing manually, you must upload a single .zip file.
+- Select "Software" as the resource type, 
+  and add [metadata](https://help.zenodo.org/docs/deposit/describe-records/) for the deposit
+- Publish the record
 
 ## Confidential requests
 
