@@ -190,8 +190,7 @@ Optionally:
 
 Repository archives at Zenodo can either be made through Zenodo's automatic release depositing feature
 or manually. 
-It is recommended to create either a `CITATION.cff` or a 
-[`.zenodo.json`](https://help.zenodo.org/docs/github/describe-software/zenodo-json/) file so the JOSS metadata is incorporated in the Zenodo deposit.
+It is recommended to create a `CITATION.cff` file so the JOSS metadata is incorporated in the Zenodo deposit.
 
 #### Automatic Archiving
 
