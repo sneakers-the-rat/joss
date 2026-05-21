@@ -171,11 +171,58 @@ After submission:
 - **JOSS reviews are iterative and conversational in nature.** Reviewers are encouraged to post comments/questions/suggestions in the review thread as they arise, and authors are expected to respond in a timely fashion.
 - **Authors are expected to respond to reviewer feedback promptly.** We generally ask that authors respond to reviewer comments and questions within 2 weeks, and complete requested changes within 4-6 weeks, matching the commitment we ask of reviewers, unless otherwise negotiated with the editor. If you need more time (for example, if the changes requested are particularly substantial), please communicate this to the reviewers and editor on the review thread. Prolonged unresponsiveness may result in the paper being rejected due to lack of engagement.
 - Authors and reviewers are asked to be patient when waiting for a response from an editor. Please allow a week for an editor to respond to a question before prompting them for further action.
-- Upon successful completion of the review, authors will make a tagged release of the software, and deposit a copy of the repository with a data-archiving service such as [Zenodo](https://zenodo.org/) or [figshare](https://figshare.com/), get a DOI for the archive, and update the review issue thread with the version number and DOI.
+
+If you want to learn more details about the review process, take a look at the [reviewer guidelines](reviewer_guidelines).
+
+## Post-Review
+
+- Upon successful completion of the review, authors will make a tagged release of the software. Releases must include the complete contents of the repository at the tagged release commit. It is recommended to also include built artifacts like compiled binaries, when applicable, reasonable, and supported by the archive.
+- Authors will deposit a copy of the repository at the tagged release with a data-archiving service such as [Zenodo](https://zenodo.org/) (see [below](#archiving-with-zenodo)) or [figshare](https://figshare.com/), get a DOI for the archive, and update the review issue thread with the version number and DOI.
 - After we assign a DOI for your accepted JOSS paper, its metadata is deposited with CrossRef and listed on the JOSS website.
 - The review issue will be closed, and an automatic post from [@JOSS at Mastodon](https://fosstodon.org/@joss) will announce it!
 
-If you want to learn more details about the review process, take a look at the [reviewer guidelines](reviewer_guidelines).
+Optionally:
+- Authors may wish to add a `CITATION.cff` file referencing the JOSS publication. 
+  See the [`CITATION.cff` docs](https://citation-file-format.github.io/) or 
+  [Zenodo's citation docs](https://help.zenodo.org/docs/github/describe-software/citation-file/).
+
+### Archiving with Zenodo
+
+Repository archives at Zenodo can either be made manually, 
+or through Zenodo's automatic release depositing feature. 
+It is recommended to create either a `CITATION.cff` or a 
+[`.zenodo.json`](https://help.zenodo.org/docs/github/describe-software/zenodo-json/) file so the JOSS metadata is incorporated in the Zenodo deposit.
+
+#### Manual Archiving
+
+See: 
+[Upload software manually](https://help.zenodo.org/docs/github/archive-software/manual-upload/) and 
+[Create new upload](https://help.zenodo.org/docs/deposit/create-new-upload)
+
+- Download the files from the GitHub release
+- Create a new [Zenodo upload](https://help.zenodo.org/docs/deposit/create-new-upload/)
+- Upload the zipped files from the release.
+  When depositing manually, you must upload a single .zip file.
+- Select "Software" as the resource type, 
+  and add [metadata](https://help.zenodo.org/docs/deposit/describe-records/) for the deposit
+- Publish the record
+
+#### Automatic Archiving
+
+See: 
+[Enable a GitHub repository](https://help.zenodo.org/docs/github/enable-repository/), 
+[Archive a release from GitHub](https://help.zenodo.org/docs/github/archive-software/github-upload/)
+
+After creating the GitHub release:
+
+- Navigate to the [github settings page](https://zenodo.org/account/settings/github/),
+- Link your GitHub account, if it isn't already.
+- [Enable your repository](https://help.zenodo.org/docs/github/enable-repository/) by toggling the slider.
+  You may need to sync zenodo's list of repositories, 
+  or [grant the zenodo GitHub app permissions](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization) 
+  if the repository is owned by an organization that has not granted permissions.
+
+Zenodo will now automatically update its archived copy whenever a GitHub release is made.
 
 ## Confidential requests
 
