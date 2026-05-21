@@ -172,7 +172,7 @@ After submission:
 - **Authors are expected to respond to reviewer feedback promptly.** We generally ask that authors respond to reviewer comments and questions within 2 weeks, and complete requested changes within 4-6 weeks, matching the commitment we ask of reviewers, unless otherwise negotiated with the editor. If you need more time (for example, if the changes requested are particularly substantial), please communicate this to the reviewers and editor on the review thread. Prolonged unresponsiveness may result in the paper being rejected due to lack of engagement.
 - Authors and reviewers are asked to be patient when waiting for a response from an editor. Please allow a week for an editor to respond to a question before prompting them for further action.
 
-If you want to learn more details about the review process, take a look at the [reviewer guidelines](reviewer_guidelines).
+Further details about the review process are available in the [reviewer guidelines](reviewer_guidelines).
 
 ## Post-Review
 
